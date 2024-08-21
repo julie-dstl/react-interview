@@ -23,8 +23,8 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 1. **Cloner le dépôt** :
    ```bash
-   git clone <URL_du_dépôt>
-   cd my-movie-app
+   git clone git@github.com:julie-dstl/react-interview.git
+   cd moviesapp
    ```
 
 2. **Installer les dépendances**:
