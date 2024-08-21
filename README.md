@@ -1,21 +1,76 @@
-# react-interview
+# My Movie App
 
-1. Lister les films dans des cartes avec: le titre en gras, la catégorie et une jauge type Youtube indiquant le ratio likes/dislikes. Les cartes doivent être côtes à côtes et responsive. Càd que lorsque la fenêtre se réduit, les cartes sautent à la ligne suivante.
+## Description
 
-2. Ajouter un bouton dans les cartes permettant de supprimer celle-ci
+**My Movie App** est une application de gestion de films développée avec **React** et **Redux**. L'application permet de lister des films, de les filtrer par catégorie, de les paginer, de les aimer/détester, et de les supprimer. L'objectif de ce projet est de démontrer des compétences en développement front-end avec React et la gestion d'état global avec Redux.
 
-3. Ajouter un bouton toggle like/dislike
+## Fonctionnalités
 
-4. Ajouter un filtre par catégorie (de type multiselect) en supposant qu'on ne les connaisse pas à l'avance (il faut donc les récupérer dynamiquement depuis les films). Si tous les films d'une catégorie sont supprimés, celle-ci ne doit plus apparaître.
+- **Liste de films** : Affiche les films sous forme de cartes avec titre, catégorie, likes, et dislikes.
+- **Filtrage par catégorie** : Filtre les films par catégorie avec un multi-sélecteur.
+- **Pagination** : Navigation entre les pages avec possibilité de choisir le nombre de films affichés par page (4, 8 ou 12).
+- **Gestion des likes/dislikes** : Ajout d'un bouton pour aimer ou détester un film.
+- **Suppression de film** : Supprime un film de la liste.
 
-5. Ajouter un système de pagination avec les fonctionnalités suivantes: 
-    * Boutons précédent/suivant
-    * Choix du nombre d'élements affichés par page (4, 8 ou 12).
+## Prérequis
 
-Prenez des initiatives, il y a des points bonus si
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-* C'est joli
-* Vous utilisez correctement REDUX 
-* Il y a une attention aux détails
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [npm](https://www.npmjs.com/) (généralement installé avec Node.js)
 
-/!\ La suppression du comportement asynchrone dans `movies.js` entraînera une annulation du test.
+## Installation
+
+1. **Cloner le dépôt** :
+   ```bash
+   git clone <URL_du_dépôt>
+   cd my-movie-app
+   ```
+
+2. **Installer les dépendances**:
+    ```bash
+    npm install
+    ```
+
+## Lancer l'application
+
+1. **Démarrer le serveur**
+    ```bash
+    npm start
+    ```
+
+2. **Accéder à l'application**:
+
+Une fois le serveur démarré, l'application sera accessible à l'adresse suivante : http://localhost:3000.
+
+## Architecture du projet
+
+├── package.json
+├── package-lock.json
+├── public
+│   ├── index.html
+│   ├── thumb-down-white.png
+│   └── thumb-up-white.png
+├── README.md
+└── src
+    ├── App.js
+    ├── App.test.js
+    ├── components
+    │   ├── Filter.css
+    │   ├── Filter.js
+    │   ├── HomePage.css
+    │   ├── HomePage.js
+    │   ├── MovieCard.css
+    │   ├── MovieCard.js
+    │   ├── MovieList.css
+    │   ├── MovieList.js
+    │   └── Pagination.js
+    ├── index.css
+    ├── index.js
+    ├── movies.js
+    ├── redux
+    │   ├── actions.js
+    │   ├── reducers.js
+    │   └── store.js
+    ├── reportWebVitals.js
+    └── setupTests.js
