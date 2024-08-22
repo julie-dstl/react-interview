@@ -21,17 +21,36 @@ const MovieCard = ({ movie }) => {
     const total = movie.likes + movie.dislikes;
     const percentage = total === 0 ? 0 : (movie.likes / total) * 100;
 
+    let gaugeColor = '';
+    if (percentage <= 30) {
+        gaugeColor = '#ff4c4c';
+    } else if (percentage <= 60) {
+        gaugeColor = '#ffeb3b';
+    } else {
+        gaugeColor = '#4caf50';
+    }
+
     return (
         <div className="movie-card">
-            <h2>{movie.title}</h2>
-            <p>{movie.category}</p>
-            <div className="gauge-container">
-                <div className="gauge" style={{width: `${percentage}%`}}></div>
+            <div className="movie-card-top">
+                <h2>{movie.title}</h2>
+                <p className="movie-category">{movie.category}</p>
             </div>
-            <button onClick={handleDelete}>Delete</button>
-            <div className="likedislike">
-                <img className="icon" onClick={handleToggleLike} src="/thumb-up-white.png"/>
-                <img className="icon" onClick={handleToggleDislike} src="/thumb-down-white.png"/>
+            <div className="movie-card-bottom">
+                <div className="gauge-container">
+                    <div className="gauge" style={{width: `${percentage}%`,  backgroundColor: gaugeColor }}></div>
+                </div>
+                <div className="likedislike">
+                    <div>
+                        <img className="icon" onClick={handleToggleLike} src="/small-thumb-up-gray.png"/>
+                        <p className="counter-like-dislike">{movie.likes}</p>
+                    </div>
+                    <div>
+                        <img className="icon" onClick={handleToggleDislike} src="/small-thumb-down-gray.png"/>
+                        <p className="counter-like-dislike">{movie.dislikes}</p>
+                    </div>
+                </div>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     );
