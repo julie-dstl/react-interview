@@ -24,7 +24,6 @@ const MovieList = () => {
       {paginatedMovies.map(movie => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
-      {/* Pagination controls would go here */}
     </div>
   );
 };
