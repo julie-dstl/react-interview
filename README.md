@@ -76,4 +76,4 @@ Une fois le serveur démarré, l'application sera accessible à l'adresse suivan
     │   └── store.js
     ├── reportWebVitals.js
     └── setupTests.js
-    ```
+```
