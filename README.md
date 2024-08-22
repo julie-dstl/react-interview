@@ -45,12 +45,13 @@ Une fois le serveur démarré, l'application sera accessible à l'adresse suivan
 
 ## Architecture du projet
 
+```bash
 ├── package.json
 ├── package-lock.json
 ├── public
 │   ├── index.html
-│   ├── thumb-down-white.png
-│   └── thumb-up-white.png
+│   ├── small-thumb-down-gray.png
+│   └── small-thumb-up-gray.png
 ├── README.md
 └── src
     ├── App.js
@@ -64,7 +65,8 @@ Une fois le serveur démarré, l'application sera accessible à l'adresse suivan
     │   ├── MovieCard.js
     │   ├── MovieList.css
     │   ├── MovieList.js
-    │   └── Pagination.js
+    │   ├── Pagination.js
+    │   └── Pagination.css
     ├── index.css
     ├── index.js
     ├── movies.js
@@ -74,3 +76,4 @@ Une fois le serveur démarré, l'application sera accessible à l'adresse suivan
     │   └── store.js
     ├── reportWebVitals.js
     └── setupTests.js
+    ```
