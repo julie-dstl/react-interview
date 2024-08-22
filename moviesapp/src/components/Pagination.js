@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentPage, setPageSize } from '../redux/actions';
+import './Pagination.css'
 
 const Pagination = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const Pagination = () => {
       >
         Suivant
       </button>
-      <select onChange={(e) => dispatch(setPageSize(Number(e.target.value)))}>
+      <select className="select-page-size" onChange={(e) => dispatch(setPageSize(Number(e.target.value)))}>
         <option value={4}>4</option>
         <option value={8}>8</option>
         <option value={12}>12</option>

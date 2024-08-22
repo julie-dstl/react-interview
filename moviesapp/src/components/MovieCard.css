@@ -70,17 +70,6 @@
     border-radius: 0px;
 }
 
-.gauge-bar {
-    height: 100%;
-    border-radius: 25px;
-}
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
 .icon {
     display: inline;
     width: 30px;
